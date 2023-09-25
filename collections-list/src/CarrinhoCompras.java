@@ -1,7 +1,8 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class CarrinhoCompras{
+public class CarrinhoCompras {
 
     // criando a lista de objetos
     private List<Item> itemList;
@@ -115,5 +116,17 @@ public class CarrinhoCompras{
       public String toString() {
         return "CarrinhoDeCompras itens= " + itemList;
       }
+
+     public List<Item> ordenarPorQuantidade(){
+      List<Item> itemPorQuandidade = new ArrayList<>(itemList);
+      if(!itemList.isEmpty()) {
+        Collections.sort(itemPorQuandidade);
+        return itemPorQuandidade;
+
+      }else{
+        throw new RuntimeException("A lista está vazia");
+      }
+      
+     }
 
 }

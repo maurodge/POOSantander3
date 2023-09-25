@@ -23,5 +23,6 @@ public class Application {
         System.out.println("Pesquisando item fita adesiva " + car.pesquisarItem("fita adesiva"));
         System.out.println("Pesquisando item intervalo de valor " + car.pesquisarIntervaloValor(4, 15));
         System.out.println("Pesquisando item e parando quando aparece o primeiro " + car.pesquisarPreco(3) );
+        System.out.println("A lista em ordem de quantidade é: " + car.ordenarPorQuantidade());
     }
 }

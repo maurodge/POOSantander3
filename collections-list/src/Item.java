@@ -1,5 +1,5 @@
 
-public class Item {
+public class Item implements Comparable <Item>{
 
     // atributos
     private String nome;
@@ -43,6 +43,12 @@ public class Item {
     @Override
     public String toString() {
         return "Item: " + "nome = " + nome + ", preco = " + preco + ", quantidade = " + quantidade;
+    }
+
+    @Override
+    public int compareTo(Item o) {
+        return Integer.compare(quantidade, o.getQuantidade());
+        
     }
  
 }
